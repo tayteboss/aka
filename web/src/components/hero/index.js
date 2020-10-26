@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Ticker from '../ticker';
 import logoGif from '../../assets/images/aka-rotate.gif';
 
 const HeroWrapper = styled.section`
@@ -29,6 +30,7 @@ const Hero = () => {
             <LogoWrapper>
                 <Img src={logoGif} alt='logo gif' />
             </LogoWrapper>
+            <Ticker />
         </HeroWrapper>
     );
 };
