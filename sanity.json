@@ -1,11 +1,11 @@
 {
   "root": true,
-  "project": {
-    "name": "sanitygatsbyboiler"
-  },
   "api": {
-    "projectId": "v1bojt31",
+    "projectId": "edx6dbv9",
     "dataset": "production"
+  },
+  "project": {
+    "name": "AKA"
   },
   "plugins": [
     "@sanity/base",
@@ -16,7 +16,9 @@
   ],
   "env": {
     "development": {
-      "plugins": ["@sanity/vision"]
+      "plugins": [
+        "@sanity/vision"
+      ]
     }
   },
   "parts": [
