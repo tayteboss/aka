@@ -5,6 +5,7 @@ import GlobalStyle from '../shared/baseCSS';
 import Theme from '../shared/theme';
 import Layout from '../layouts';
 import Header from '../components/header';
+import Hero from '../components/hero';
 import Components from '../components/components';
 import Footer from '../components/footer';
 
@@ -23,6 +24,7 @@ const App = ({ data }) => {
             <GlobalStyle />
             <Layout title={title} metaDescription={metaDescription} />
             <Header />
+            <Hero />
             <Components components={components}/>
             <Footer />
           </ThemeProvider>

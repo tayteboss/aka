@@ -24,9 +24,11 @@ const GlobalStyle = createGlobalStyle`
     body {
         background: white;
         margin: 0;
+        padding: 20px;
         font-size: ${theme.size.medium};
         color: ${theme.colours.darkNavy};
         font-family: ${theme.fonts.MonumentReg};
+        -webkit-font-smoothing: antialiased;
 
         &.no-scroll {
             overflow: hidden;
