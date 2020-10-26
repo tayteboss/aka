@@ -3,7 +3,7 @@ import H2 from '../../elements/typography/H2';
 
 const Footer = () => (
     <>
-        <H2>Footer</H2>
+        {/* <H2>Footer</H2> */}
     </>
 );
 

@@ -4,6 +4,7 @@ const Theme = {
     darkNavy: '#454d52',
     lightGray: '#dedede',
     green: '#70ee54',
+    black: '#000',
     overlay: 'rgba(0, 0, 0, 0.6)',
   },
   fonts: {

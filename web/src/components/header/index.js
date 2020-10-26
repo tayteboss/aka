@@ -9,7 +9,7 @@ const Nav = styled.nav`
 `;
 
 const Logo = styled(H3)`
-    color: ${props => props.theme.colours.lightGray};
+    color: ${props => props.theme.colours.darkNavy};
 `;
 
 const NavItems = styled.div`
@@ -18,7 +18,7 @@ const NavItems = styled.div`
 
 const NavLink = styled(H3)`
     margin-left: 40px;
-    color: ${props => props.theme.colours.lightGray};
+    color: ${props => props.theme.colours.darkNavy};
 `;
 
 const Header = () => (
