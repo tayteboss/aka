@@ -5,7 +5,6 @@ import post from './documents/post';
 import richText from './array/richText';
 import figure from './objects/figure';
 import page from './documents/page';
-import album from './documents/album';
 
 export default createSchema({
   name: 'default',
@@ -15,7 +14,6 @@ export default createSchema({
       richText, 
       figure,
       page,
-      album,
     ]
   ),
 });

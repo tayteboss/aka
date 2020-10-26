@@ -36,7 +36,6 @@ export default {
           type: 'reference',
           to: [
             {type: 'post'},
-            {type: 'album'},
           ]
         }
       ]

@@ -1,12 +1,22 @@
-import { createGlobalStyle } from 'styled-components'
-import theme from './theme'
-import studioPro from '../assets/fonts/StudioPro-Regular.woff'
+import { createGlobalStyle } from 'styled-components';
+import theme from './theme';
+import caja from '../assets/fonts/Cajatype-Regular.ttf';
+import monumentReg from '../assets/fonts/MonumentGrotesk-Regular.otf';
+import monumentMed from '../assets/fonts/MonumentGrotesk-Medium.otf';
 
 const GlobalStyle = createGlobalStyle`
     @font-face {
-        font-family: 'StudioPro-Regular';
-        src: url(${studioPro});
-    }
+        font-family: 'Cajatype-Regular';
+        src: url(${caja});
+    };
+    @font-face {
+        font-family: 'MonumentGrotesk-Regular';
+        src: url(${monumentReg});
+    };
+    @font-face {
+        font-family: 'MonumentGrotesk-Medium';
+        src: url(${monumentMed});
+    };
 
     body, html, #root {
         height: 100%;
@@ -15,15 +25,15 @@ const GlobalStyle = createGlobalStyle`
         background: white;
         margin: 0;
         font-size: ${theme.size.medium};
-        color: ${theme.colours.default.light};
-        font-family: ${theme.fonts.studioPro};
+        color: ${theme.colours.darkNavy};
+        font-family: ${theme.fonts.MonumentReg};
 
         &.no-scroll {
             overflow: hidden;
         }
     }
     a {
-        color: ${theme.colours.orange};
+        color: ${theme.colours.darkNavy};
         text-decoration: none;
     }
     a, button { cursor: pointer }
@@ -57,4 +67,4 @@ const GlobalStyle = createGlobalStyle`
     /* Webkit browsers add a 2px margin outside the chrome of form elements */
     button, input, select, textarea {margin: 0;}
 `
-export default GlobalStyle
+export default GlobalStyle;
