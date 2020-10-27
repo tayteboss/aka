@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
         height: 100%;
     }
     body {
-        background: white;
+        background: black;
         margin: 0;
         font-size: ${theme.size.p};
         color: ${theme.colours.darkNavy};

@@ -8,6 +8,7 @@ import Header from '../components/header';
 import Hero from '../components/hero';
 import Components from '../components/components';
 import Footer from '../components/footer';
+import ReactFluidScroll from 'react-fluid-scroll';
 
 const App = ({ data }) => {
     const {
@@ -20,14 +21,16 @@ const App = ({ data }) => {
 
     return (
         <>
-          <ThemeProvider theme={Theme}>
-            <GlobalStyle />
-            <Layout title={title} metaDescription={metaDescription} />
-            <Header />
-            <Hero />
-            <Components components={components}/>
-            <Footer />
-          </ThemeProvider>
+          <ReactFluidScroll viscosity={0.2}>
+            <ThemeProvider theme={Theme}>
+                <GlobalStyle />
+                <Layout title={title} metaDescription={metaDescription} />
+                <Header />
+                <Hero />
+                <Components components={components}/>
+                <Footer />
+            </ThemeProvider>
+          </ReactFluidScroll>
         </>
     )
 };
