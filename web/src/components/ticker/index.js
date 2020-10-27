@@ -26,7 +26,6 @@ const Text = styled(H2)`
 `;
 
 const StripTicker = ({ data }) => {
-    console.log('ticker', data)
     return(
         <StripWrapper>
             <Ticker>

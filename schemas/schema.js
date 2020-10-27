@@ -6,6 +6,7 @@ import figure from './objects/figure';
 import page from './documents/page';
 import statement from './documents/statement';
 import ticker from './documents/ticker';
+import panel from './documents/panel';
 
 export default createSchema({
   name: 'default',
@@ -16,6 +17,7 @@ export default createSchema({
       figure,
       ticker, 
       statement, 
+      panel, 
     ]
   ),
 });

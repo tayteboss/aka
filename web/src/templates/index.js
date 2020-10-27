@@ -6,8 +6,8 @@ import Theme from '../shared/theme';
 import Layout from '../layouts';
 import Header from '../components/header';
 import Hero from '../components/hero';
-import Ticker from '../components/ticker';
 import Components from '../components/components';
+import Panel from '../components/panel';
 import Footer from '../components/footer';
 
 const App = ({ data }) => {

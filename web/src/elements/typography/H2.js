@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const H2 = styled.h2`
     color: ${props => props.secondary ? props.theme.colours.salmon : props.theme.colours.darkNavy};
-    font-family: ${props => props.theme.fonts.monumentReg};
+    font-family: ${props => props.theme.fonts.caja};
     font-size: ${props => props.theme.size.h2};
     margin: 0 0 28px 0;
 `;

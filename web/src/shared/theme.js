@@ -14,7 +14,7 @@ const Theme = {
   },
   size: {
     small: '12px',
-    p: '14px',
+    p: '23px',
     h6: '18px',
     h5: '21px',
     h4: '23px',
@@ -23,7 +23,8 @@ const Theme = {
     h1: '90px',
   },
   mediaBreakpoints: {
-    desktop: '(min-width: 769px)',
+    large: '(min-width: 1440px)',
+    desktop: '(min-width: 769px) and (max-width: 1439px)',
     tablet: '(min-width: 480px) and (max-width: 768px)',
     mobile: '(max-width: 479px)',
   },

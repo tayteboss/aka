@@ -40,6 +40,7 @@ export default {
           to: [
             {type: 'tickers'},
             {type: 'statements'},
+            {type: 'panels'},
           ]
         }
       ]
@@ -47,12 +48,12 @@ export default {
   ],
   preview: {
     select: {
-      pageId: 'pageId',
+      title: 'pageId',
       slug: 'slug'
     },
-    prepare ({pageId = 'No title', slug = {}}) {
+    prepare ({title = 'No title', slug = {}}) {
       return {
-        pageId,
+        title,
         subtitle: slug.current
       }
     }

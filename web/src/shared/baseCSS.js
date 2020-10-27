@@ -24,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
     body {
         background: white;
         margin: 0;
-        font-size: ${theme.size.medium};
+        font-size: ${theme.size.p};
         color: ${theme.colours.darkNavy};
         font-family: ${theme.fonts.MonumentReg};
         -webkit-font-smoothing: antialiased;
@@ -67,5 +67,37 @@ const GlobalStyle = createGlobalStyle`
 
     /* Webkit browsers add a 2px margin outside the chrome of form elements */
     button, input, select, textarea {margin: 0;}
+
+    p {
+        font-family: 'MonumentGrotesk-Regular';
+        font-size: ${theme.size.p};
+        color: ${theme.colours.darkNavy};
+        margin: 0 0 32px 0;
+    }
+
+    h4 {
+        font-family: 'MonumentGrotesk-Medium';
+        font-size: ${theme.size.h4};
+        color: ${theme.colours.darkNavy};
+        margin: 0;
+    }
+
+    ul {
+        list-style-type: none;
+        li {
+            font-family: 'MonumentGrotesk-Regular';
+            font-size: ${theme.size.p};
+            color: ${theme.colours.darkNavy};
+            margin: 0;
+        }
+    }
+
+    a {
+        text-decoration: underline;
+
+        &:hover {
+            font-style: italic;
+        }
+    }
 `
 export default GlobalStyle;

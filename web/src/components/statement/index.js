@@ -9,7 +9,6 @@ const StatementWrapper = styled.section`
     justify-content: center;
     align-items: center;
     border-top: 2px solid ${props => props.theme.colours.darkNavy};
-    border-bottom: 2px solid ${props => props.theme.colours.darkNavy};
 `;
 
 const Text = styled(H1)`
