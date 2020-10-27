@@ -6,6 +6,7 @@ const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
     width: 100%;
+    padding: 20px;
 `;
 
 const Logo = styled(H3)`

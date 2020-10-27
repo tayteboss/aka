@@ -1,7 +1,10 @@
+import { CgWebsite } from 'react-icons/cg';
+
 export default {
   name: 'page',
   type: 'document',
   title: 'Pages',
+  icon: CgWebsite,
   fields: [
     {
       name: 'pageId',
@@ -35,7 +38,8 @@ export default {
         {
           type: 'reference',
           to: [
-            {type: 'post'},
+            {type: 'tickers'},
+            {type: 'statements'},
           ]
         }
       ]
@@ -43,12 +47,12 @@ export default {
   ],
   preview: {
     select: {
-      title: 'title',
+      pageId: 'pageId',
       slug: 'slug'
     },
-    prepare ({title = 'No title', slug = {}}) {
+    prepare ({pageId = 'No title', slug = {}}) {
       return {
-        title,
+        pageId,
         subtitle: slug.current
       }
     }

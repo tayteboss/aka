@@ -4,8 +4,11 @@ export const query = graphql`
     fragment ComponentsFragment on SanityPage {
         components {
             __typename
-            ... on SanityPost {
-                ...ComponentPostsFragment
+            ... on SanityStatements {
+                ...ComponentStatementFragment
+            }
+            ... on SanityTickers {
+                ...ComponentTickerFragment
             }
         }
     }
