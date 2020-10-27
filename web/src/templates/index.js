@@ -7,7 +7,6 @@ import Layout from '../layouts';
 import Header from '../components/header';
 import Hero from '../components/hero';
 import Components from '../components/components';
-import Panel from '../components/panel';
 import Footer from '../components/footer';
 
 const App = ({ data }) => {

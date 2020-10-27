@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import H2 from '../../elements/typography/H2';
 import PortableText from '../../utilities/portableText';
