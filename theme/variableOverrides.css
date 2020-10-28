@@ -1,7 +1,7 @@
 /* variables to override: https://github.com/sanity-io/sanity/tree/current/packages/%40sanity/base/src/styles/variables */
 
 :root {
-  /* --brand-primary: #81a76d;
-  --brand-secondary: #95bf6f; */
+  --brand-primary: #454d52;
+  --brand-secondary: #dedede;
   --font-family-base: 'Helvetica';
 }
