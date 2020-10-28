@@ -76,6 +76,15 @@ const GlobalStyle = createGlobalStyle`
         font-size: ${theme.size.p};
         color: ${theme.colours.darkNavy};
         margin: 0 0 32px 0;
+
+        @media ${theme.mediaBreakpoints.tablet} {
+            font-size: 15px;
+            line-height: 1.2;
+        }
+        @media ${theme.mediaBreakpoints.mobile} {
+            font-size: 15px;
+            line-height: 1.2;
+        }
     }
 
     h4 {
@@ -83,6 +92,15 @@ const GlobalStyle = createGlobalStyle`
         font-size: ${theme.size.h4};
         color: ${theme.colours.darkNavy};
         margin: 0;
+
+        @media ${theme.mediaBreakpoints.tablet} {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        @media ${theme.mediaBreakpoints.mobile} {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
     }
 
     ul {
@@ -92,6 +110,13 @@ const GlobalStyle = createGlobalStyle`
             font-size: ${theme.size.p};
             color: ${theme.colours.darkNavy};
             margin: 0;
+
+            @media ${theme.mediaBreakpoints.tablet} {
+                font-size: 18px;
+            }
+            @media ${theme.mediaBreakpoints.mobile} {
+                font-size: 18px;
+            }
         }
     }
 
@@ -141,6 +166,11 @@ const GlobalStyle = createGlobalStyle`
     }
     ::-moz-selection {
         background: ${theme.colours.lightGray};
+    }
+
+    .arrow {
+        display: flex;
+        align-items: center;
     }
 `
 export default GlobalStyle;

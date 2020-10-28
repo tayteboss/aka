@@ -25,7 +25,7 @@ const Img = styled.img`
 
 const Hero = () => {
     return (
-        <HeroWrapper>
+        <HeroWrapper id='Top'>
             <LogoWrapper>
                 <Img src={logoGif} alt='logo gif' />
             </LogoWrapper>

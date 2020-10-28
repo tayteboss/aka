@@ -6,6 +6,7 @@ import Theme from '../shared/theme';
 import Layout from '../layouts';
 import Header from '../components/header';
 import Hero from '../components/hero';
+// import CanvasThree from '../components/canvasThree';
 import Components from '../components/components';
 import Footer from '../components/footer';
 import Cursor from '../elements/cursor';
@@ -17,8 +18,6 @@ const App = ({ data }) => {
         metaDescription,
         components,
     } = data.allSanityPage.edges[0].node
-
-    console.log('data', data.allSanityPage);
 
     return (
         <>

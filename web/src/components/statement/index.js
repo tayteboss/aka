@@ -17,6 +17,11 @@ const StatementWrapper = styled.section`
 const Text = styled(H1)`
     margin: 170px 0;
     width: 80%;
+
+    @media ${props => props.theme.mediaBreakpoints.mobile} {
+        margin: 60px 20px;
+        width: 100%;
+    }
 `;
 
 const Statement = ({ data }) => {

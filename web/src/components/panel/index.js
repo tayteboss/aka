@@ -13,21 +13,95 @@ const PanelWrapper = styled.section`
     z-index: 5;
     position: sticky;
     top: 0;
+
+    @media ${props => props.theme.mediaBreakpoints.tablet} {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    @media ${props => props.theme.mediaBreakpoints.mobile} {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
 `;
 
 const ColumnOne = styled.div`
     margin-left: 5%;
     min-width: 20%;
+
+    @media ${props => props.theme.mediaBreakpoints.tablet} {
+        margin-left: 0;
+        padding: 15px 20px;
+        min-width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-bottom: 2px solid ${props => props.theme.colours.darkNavy};
+    }
+
+    @media ${props => props.theme.mediaBreakpoints.mobile} {
+        margin-left: 0;
+        padding: 15px 20px;
+        min-width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-bottom: 2px solid ${props => props.theme.colours.darkNavy};
+    }
+`;
+
+const Text = styled(H2)`
+    color: ${props => props.secondary ? props.theme.colours.salmon : props.theme.colours.darkNavy};
+    font-family: ${props => props.theme.fonts.caja};
+    font-size: ${props => props.theme.size.h2};
+    margin: 0 0 28px 0;
+
+    @media ${props => props.theme.mediaBreakpoints.tablet} {
+        font-size: 30px;
+        margin: 0;
+    }
+
+    @media ${props => props.theme.mediaBreakpoints.mobile} {
+        font-size: 30px;
+        margin: 0;
+    }
 `;
 
 const ColumnTwo = styled.div`
     max-width: 30%;
     min-width: 30%;
     margin-right: 10%;
+
+    @media ${props => props.theme.mediaBreakpoints.tablet} {
+        max-width: 60%;
+        min-width: 60%;
+        margin-right: 0;
+        margin-top: ${props => props.isContact ? null : '135px'};
+        margin-bottom: ${props => props.isContact ? '55px' : null};
+        order: ${props => props.isContact ? 5 : 0};
+    }
+
+    @media ${props => props.theme.mediaBreakpoints.mobile} {
+        max-width: 60%;
+        min-width: 60%;
+        margin-right: 0;
+        margin-top: ${props => props.isContact ? null : '135px'};
+        margin-bottom: ${props => props.isContact ? '55px' : null};
+        order: ${props => props.isContact ? 5 : null};
+    }
 `;
 
 const ColumnThree = styled.div`
 
+    @media ${props => props.theme.mediaBreakpoints.tablet} {
+        margin-bottom: ${props => props.isContact ? null : '55px'};
+        margin-top: ${props => props.isContact ? '135px' : null};
+    }
+
+    @media ${props => props.theme.mediaBreakpoints.mobile} {
+        margin-bottom: ${props => props.isContact ? null : '55px'};
+        margin-top: ${props => props.isContact ? '135px' : null};
+    }
 `;
 
 const BorderTop = styled.div`
@@ -39,18 +113,18 @@ const BorderTop = styled.div`
     left: 0;
 `;
 
-const Panel = ({ data, props }) => {
-    console.log('props', props)
+const Panel = ({ data }) => {
+    const isContact = data.panelTitle === 'Contact';
     return(
         <PanelWrapper id={data.panelTitle}>
             <BorderTop />
             <ColumnOne>
                 <Fade>
-                    <H2>{data.panelTitle}</H2>
+                    <Text>{data.panelTitle}</Text>
                 </Fade>
             </ColumnOne>
             {data.threeColumnPanel ? (
-                <ColumnTwo>
+                <ColumnTwo isContact={isContact}>
                 <Fade>
                     <PortableText blocks={data._rawPanelDescription} />
                 </Fade>
@@ -58,12 +132,12 @@ const Panel = ({ data, props }) => {
             ) : (
                 <ColumnTwo />
                 )}
-            <ColumnThree>
+            <ColumnThree isContact={isContact}>
                 <Fade>
                     <PortableText blocks={data._rawPanelList} />
                 </Fade>
             </ColumnThree>
-            </PanelWrapper>
+        </PanelWrapper>
     );
 };
 
