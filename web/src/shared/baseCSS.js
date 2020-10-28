@@ -172,5 +172,7 @@ const GlobalStyle = createGlobalStyle`
         display: flex;
         align-items: center;
     }
+
+    button:focus {outline:0;}
 `
 export default GlobalStyle;

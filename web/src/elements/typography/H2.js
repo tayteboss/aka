@@ -7,7 +7,6 @@ const H2 = styled.h2`
     font-size: ${props => props.theme.size.h2};
     margin: 0 0 28px 0;
 
-
     @media ${props => props.theme.mediaBreakpoints.tablet} {
         font-size: 30px;
     }
