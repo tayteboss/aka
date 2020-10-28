@@ -9,8 +9,10 @@ const PanelWrapper = styled.section`
     background-color: ${props => props.theme.colours.lightGray};
     display: flex;
     position: relative;
-    /* border-top: 2px solid ${props => props.theme.colours.darkNavy}; */
     padding: 50px 0%;
+    z-index: 5;
+    position: sticky;
+    top: 0;
 `;
 
 const ColumnOne = styled.div`

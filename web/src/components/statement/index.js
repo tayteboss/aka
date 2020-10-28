@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import H1 from '../../elements/typography/H1';
-import Fade from 'react-reveal/Fade';
 
 const StatementWrapper = styled.section`
     background-color: ${props => props.theme.colours.lightGray};
@@ -10,6 +9,9 @@ const StatementWrapper = styled.section`
     justify-content: center;
     align-items: center;
     border-top: 2px solid ${props => props.theme.colours.darkNavy};
+    z-index: 3;
+    position: sticky;
+    top: 0;
 `;
 
 const Text = styled(H1)`

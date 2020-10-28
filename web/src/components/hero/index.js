@@ -9,7 +9,7 @@ const HeroWrapper = styled.section`
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -3;
 `;
 
 const LogoWrapper = styled.div`

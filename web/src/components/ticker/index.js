@@ -7,9 +7,9 @@ import Ticker from 'nice-react-ticker';
 const StripWrapper = styled.section`
     width: 100vw;
     overflow: hidden;
-    z-index: 1;
+    z-index: 3;
     height: 70px;
-    margin-top: 100vh;
+    margin-top: calc(100vh - 70px);
 
     .styles_ticker__8iZE9 {
         background-color: ${props => props.theme.colours.green};

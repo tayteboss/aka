@@ -7,6 +7,9 @@ const Nav = styled.nav`
     justify-content: space-between;
     width: 100%;
     padding: 20px;
+    position: fixed;
+    top: 0;
+    z-index: -1;
 `;
 
 const Logo = styled(H3)`
