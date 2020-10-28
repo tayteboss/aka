@@ -10,6 +10,7 @@ module.exports = {
         dataset: 'production',
         token: process.env.SANITY_TOKEN,
         watchMode: true,
+        overlayDrafts: true,
       },
     },
     'gatsby-transformer-sharp', 
