@@ -28,6 +28,7 @@ const GlobalStyle = createGlobalStyle`
         color: ${theme.colours.darkNavy};
         font-family: ${theme.fonts.MonumentReg};
         -webkit-font-smoothing: antialiased;
+        cursor: none;
 
         &.no-scroll {
             overflow: hidden;
@@ -97,11 +98,40 @@ const GlobalStyle = createGlobalStyle`
 
         &:hover {
             font-style: italic;
+            cursor: none;
         }
     }
 
     #fluid-scroll-viewport {
         /* height: 0 !important; */
+    }
+
+    .cursor {
+        width: 20px;
+        height: 20px;
+        border: 2px solid ${theme.colours.darkNavy};
+        border-radius: 100%;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        transition: all 150ms ease;
+        transition-property: background-color, opacity, transform, mix-blend-mode;
+        z-index: 9999;
+        mix-blend-mode: difference;
+    }
+
+    .cursor--hidden {
+        opacity: 0;
+    }
+
+    .cursor--link-hovered {
+        transform: translate(-50%, -50%) scale(2);
+        background-color: ${theme.colours.darkNavy};
+    }
+
+    .cursor--clicked {
+        transform: translate(-50%, -50%) scale(0.8);
+        background-color: ${theme.colours.darkNavy};
     }
 `
 export default GlobalStyle;

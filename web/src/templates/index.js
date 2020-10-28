@@ -8,6 +8,7 @@ import Header from '../components/header';
 import Hero from '../components/hero';
 import Components from '../components/components';
 import Footer from '../components/footer';
+import Cursor from '../elements/cursor';
 // import ReactFluidScroll from 'react-fluid-scroll';
 
 const App = ({ data }) => {
@@ -28,6 +29,7 @@ const App = ({ data }) => {
               <Hero />
               <Components components={components} />
               <Footer />
+              <Cursor />
           </ThemeProvider>
         </>
     )
