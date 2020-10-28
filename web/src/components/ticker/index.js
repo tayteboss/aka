@@ -19,6 +19,11 @@ const StripWrapper = styled.section`
         overflow: hidden;
         white-space: nowrap;
     }
+
+    .styles_ticker-list__1YeNe {
+        animation: styles_ticker__8iZE9 30s infinite linear;
+        width: auto;
+    }
 `;
 
 const Text = styled(H2)`
