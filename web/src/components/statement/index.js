@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import H1 from '../../elements/typography/H1';
+import Fade from 'react-reveal/Fade';
 
 const StatementWrapper = styled.section`
     background-color: ${props => props.theme.colours.lightGray};
@@ -19,7 +20,7 @@ const Text = styled(H1)`
 
 const Statement = ({ data }) => {
     return(
-        <StatementWrapper>
+        <StatementWrapper id='Studio' >
             <Text>{data.statement}</Text>
         </StatementWrapper>
     );

@@ -99,5 +99,9 @@ const GlobalStyle = createGlobalStyle`
             font-style: italic;
         }
     }
+
+    #fluid-scroll-viewport {
+        /* height: 0 !important; */
+    }
 `
 export default GlobalStyle;

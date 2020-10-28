@@ -26,15 +26,16 @@ const NavLink = styled.a`
     text-decoration: none;
 `;
 
-const Header = () => (
-    <Nav>
-        <Logo>aka studio</Logo>
-        <NavItems>
-            <NavLink href='#studio'>Studio</NavLink>
-            <NavLink href='#contact'>Contact</NavLink>
-        </NavItems>
-    </Nav>
-);
+const Header = () => {
+    return(
+        <Nav>
+            <Logo>aka studio</Logo>
+            <NavItems>
+                <NavLink href='#Studio'>Studio</NavLink>
+                <NavLink href='#Contact'>Contact</NavLink>
+            </NavItems>
+        </Nav>
+    );
+};
 
 export default Header;
-

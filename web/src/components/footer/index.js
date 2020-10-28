@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import H4 from '../../elements/typography/H4';
 
-const FooterWrapper = styled.div`
+const FooterWrapper = styled.section`
     background-color: ${props => props.theme.colours.lightGray};
     border-top: 2px solid ${props => props.theme.colours.darkNavy};
 `;

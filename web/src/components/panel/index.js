@@ -3,11 +3,13 @@ import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import H2 from '../../elements/typography/H2';
 import PortableText from '../../utilities/portableText';
+import Fade from 'react-reveal/Fade';
 
 const PanelWrapper = styled.section`
     background-color: ${props => props.theme.colours.lightGray};
     display: flex;
-    border-top: 2px solid ${props => props.theme.colours.darkNavy};
+    position: relative;
+    /* border-top: 2px solid ${props => props.theme.colours.darkNavy}; */
     padding: 50px 0%;
 `;
 
@@ -26,24 +28,40 @@ const ColumnThree = styled.div`
 
 `;
 
-const Panel = ({ data }) => {
-    console.log('paneldata', data);
+const BorderTop = styled.div`
+    height: 2px;
+    width: 100vw;
+    background-color: ${props => props.theme.colours.darkNavy};
+    position: absolute;
+    top: 0;
+    left: 0;
+`;
+
+const Panel = ({ data, props }) => {
+    console.log('props', props)
     return(
-        <PanelWrapper>
+        <PanelWrapper id={data.panelTitle}>
+            <BorderTop />
             <ColumnOne>
-                <H2>{data.panelTitle}</H2>
+                <Fade>
+                    <H2>{data.panelTitle}</H2>
+                </Fade>
             </ColumnOne>
             {data.threeColumnPanel ? (
                 <ColumnTwo>
+                <Fade>
                     <PortableText blocks={data._rawPanelDescription} />
+                </Fade>
                 </ColumnTwo>
             ) : (
                 <ColumnTwo />
-            )}
+                )}
             <ColumnThree>
-                <PortableText blocks={data._rawPanelList} />
+                <Fade>
+                    <PortableText blocks={data._rawPanelList} />
+                </Fade>
             </ColumnThree>
-        </PanelWrapper>
+            </PanelWrapper>
     );
 };
 
