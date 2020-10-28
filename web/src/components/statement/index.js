@@ -17,7 +17,6 @@ const StatementWrapper = styled.section`
 const Text = styled(H1)`
     margin: 170px 0;
     width: 80%;
-    line-height: 0.84;
 `;
 
 const Statement = ({ data }) => {

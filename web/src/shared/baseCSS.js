@@ -20,7 +20,9 @@ const GlobalStyle = createGlobalStyle`
 
     body, html, #root {
         height: 100%;
+        scroll-behavior: smooth;
     }
+
     body {
         background: black;
         margin: 0;
@@ -132,6 +134,13 @@ const GlobalStyle = createGlobalStyle`
     .cursor--clicked {
         transform: translate(-50%, -50%) scale(0.8);
         background-color: ${theme.colours.darkNavy};
+    }
+
+    ::selection {
+        background: ${theme.colours.lightGray};
+    }
+    ::-moz-selection {
+        background: ${theme.colours.lightGray};
     }
 `
 export default GlobalStyle;
