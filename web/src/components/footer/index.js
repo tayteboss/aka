@@ -31,7 +31,7 @@ const Arrow = styled.img`
 const Footer = () => (
     <FooterWrapper>
         <Text>aka studio © {(new Date().getFullYear())}</Text>
-        <a href='#Top' className='arrow'><Arrow src={ArrowIcon} /></a>
+        <a href='#Studio' className='arrow'><Arrow src={ArrowIcon} /></a>
     </FooterWrapper>
 );
 
