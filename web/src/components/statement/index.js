@@ -26,7 +26,7 @@ const Text = styled(H1)`
 
 const Statement = ({ data }) => {
     return(
-        <StatementWrapper id='Studio' >
+        <StatementWrapper>
             <Text>{data.statement}</Text>
         </StatementWrapper>
     );

@@ -11,13 +11,14 @@ const StripWrapper = styled.section`
     height: 70px;
     margin-top: calc(100vh - 70px);
 
-
     @media ${props => props.theme.mediaBreakpoints.tablet} {
         height: 60px;
+        margin-top: calc(100vh - 60px);
     }
 
     @media ${props => props.theme.mediaBreakpoints.mobile} {
         height: 60px;
+        margin-top: calc(100vh - 60px);
     }
 
     .styles_ticker__8iZE9 {
@@ -53,7 +54,7 @@ const Text = styled(H2)`
 
 const StripTicker = ({ data }) => {
     return(
-        <StripWrapper>
+        <StripWrapper id='Studio'>
             <Ticker>
                 <Text>{' '}{data.tickerMessage}{' '}</Text>
             </Ticker>
