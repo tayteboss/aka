@@ -13,6 +13,7 @@ const PanelWrapper = styled.section`
     z-index: 5;
     position: sticky;
     top: 0;
+    height: ${props => props.isContact ? 'calc(100vh - 89px)' : null};
 
     @media ${props => props.theme.mediaBreakpoints.tablet} {
         flex-direction: column;
@@ -27,6 +28,7 @@ const PanelWrapper = styled.section`
 
 const ColumnOne = styled.div`
     margin-left: 5%;
+    margin-right: 20px;
     min-width: 20%;
 
     @media ${props => props.theme.mediaBreakpoints.tablet} {
@@ -51,7 +53,7 @@ const ColumnOne = styled.div`
 `;
 
 const Text = styled(H2)`
-    color: ${props => props.secondary ? props.theme.colours.salmon : props.theme.colours.darkNavy};
+    color: ${props => props.theme.colours.darkNavy};
     font-family: ${props => props.theme.fonts.caja};
     font-size: ${props => props.theme.size.h2};
     margin: 0 0 28px 0;
@@ -71,6 +73,7 @@ const ColumnTwo = styled.div`
     max-width: 30%;
     min-width: 30%;
     margin-right: 10%;
+    margin-top: 12px;
 
     @media ${props => props.theme.mediaBreakpoints.tablet} {
         max-width: 60%;
@@ -92,6 +95,8 @@ const ColumnTwo = styled.div`
 `;
 
 const ColumnThree = styled.div`
+    max-width: 320px;
+    margin-top: 12px;
 
     @media ${props => props.theme.mediaBreakpoints.tablet} {
         margin-bottom: ${props => props.isContact ? null : '55px'};
@@ -116,7 +121,7 @@ const BorderTop = styled.div`
 const Panel = ({ data }) => {
     const isContact = data.panelTitle === 'Contact';
     return(
-        <PanelWrapper id={data.panelTitle}>
+        <PanelWrapper id={data.panelTitle} isContact={isContact}>
             <BorderTop />
             <ColumnOne>
                 <Fade>

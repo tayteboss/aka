@@ -78,11 +78,11 @@ const GlobalStyle = createGlobalStyle`
         margin: 0 0 32px 0;
 
         @media ${theme.mediaBreakpoints.tablet} {
-            font-size: 15px;
+            font-size: 18px;
             line-height: 1.2;
         }
         @media ${theme.mediaBreakpoints.mobile} {
-            font-size: 15px;
+            font-size: 18px;
             line-height: 1.2;
         }
     }
@@ -112,9 +112,11 @@ const GlobalStyle = createGlobalStyle`
             margin: 0;
 
             @media ${theme.mediaBreakpoints.tablet} {
+                font-family: 'MonumentGrotesk-Medium';
                 font-size: 18px;
             }
             @media ${theme.mediaBreakpoints.mobile} {
+                font-family: 'MonumentGrotesk-Medium';
                 font-size: 18px;
             }
         }

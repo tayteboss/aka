@@ -21,6 +21,14 @@ const LogoWrapper = styled.div`
 
 const Img = styled.img`
     width: 95%;
+
+    @media ${props => props.theme.mediaBreakpoints.tablet} {
+        width: 284%;
+    }
+
+    @media ${props => props.theme.mediaBreakpoints.mobile} {
+        width: 284%;
+    }
 `;
 
 const Hero = () => {
