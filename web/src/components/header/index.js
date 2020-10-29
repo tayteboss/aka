@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
 import Menu from '../menu';
 
-const Nav = styled.nav`
+const Nav = styled.section`
     display: flex;
     justify-content: space-between;
     width: 100%;
