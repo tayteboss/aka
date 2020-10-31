@@ -22,13 +22,13 @@ const App = ({ data }) => {
     return (
         <>
           <ThemeProvider theme={Theme}>
-              <GlobalStyle />
-              <Layout title={title} metaDescription={metaDescription} />
-              <Header />
-              <Hero />
-              <Components components={components} />
-              <Footer />
-              <Cursor />
+            <GlobalStyle />
+            <Layout title={title} metaDescription={metaDescription} />
+            <Header />
+            <Hero /> 
+            <Components components={components} />
+            <Footer />
+            <Cursor />
           </ThemeProvider>
         </>
     )

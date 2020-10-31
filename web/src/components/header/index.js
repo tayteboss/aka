@@ -58,11 +58,12 @@ const NavLink = styled.a`
 `;
 
 const Header = () => {
+    const isTabletMobileDevice = useMediaQuery({ query: '(max-device-width: 768px)' });
     const isTabletMobile = useMediaQuery({ query: '(max-width: 768px)' });
     return(
         <Nav isTabletMobile={isTabletMobile}>
             <Logo>aka studio</Logo>
-            {isTabletMobile ? (
+            {isTabletMobile || isTabletMobileDevice ? (
                 <Menu />
             ) : (
                 <NavItems>
