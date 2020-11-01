@@ -44,7 +44,7 @@ const Lights = () => {
         <directionalLight
           castShadow
           position={[0, 0.5, 0]}
-          intensity={0.05}
+          intensity={0.03}
           shadow-mapSize-width={1024}
           shadow-mapSize-height={1024}
           shadow-camera-far={50}
@@ -54,9 +54,9 @@ const Lights = () => {
           shadow-camera-bottom={-10}
         />
         {/* A light to help illumnate the spinning boxes */}
-        <pointLight position={[-10, 0, -20]} intensity={0.05} />
-        <pointLight position={[0, -10, 0]} intensity={0.05} />
-        <pointLight position={[10, 0, 0]} intensity={0.05} />
+        <pointLight position={[-10, 0, -20]} intensity={0.03} />
+        <pointLight position={[0, -10, 0]} intensity={0.03} />
+        <pointLight position={[10, 0, 0]} intensity={0.03} />
         {/* <pointLight position={[10, 0, 0]} intensity={0.05} /> */}
     </>
   );
