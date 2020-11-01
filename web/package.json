@@ -29,6 +29,7 @@
     "gatsby-plugin-styled-components": "^3.3.13",
     "gatsby-source-sanity": "^6.0.4",
     "gatsby-transformer-sharp": "^2.5.18",
+    "lerp": "^1.0.3",
     "nice-react-ticker": "^1.1.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",

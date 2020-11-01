@@ -5,8 +5,8 @@ import GlobalStyle from '../shared/baseCSS';
 import Theme from '../shared/theme';
 import Layout from '../layouts';
 import Header from '../components/header';
-import Hero from '../components/hero';
-// import CanvasThree from '../components/canvasThree';
+// import Hero from '../components/hero';
+import CanvasThree from '../components/canvasThree';
 import Components from '../components/components';
 import Footer from '../components/footer';
 import Cursor from '../elements/cursor';
@@ -25,7 +25,7 @@ const App = ({ data }) => {
             <GlobalStyle />
             <Layout title={title} metaDescription={metaDescription} />
             <Header />
-            <Hero /> 
+            <CanvasThree /> 
             <Components components={components} />
             <Footer />
             <Cursor />

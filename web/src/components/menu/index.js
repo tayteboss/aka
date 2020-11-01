@@ -20,7 +20,7 @@ const Link = styled.a`
 const Text = styled.button`
     background: none;
     border: none;
-    color: ${props => props.secondary ? props.theme.colours.salmon : props.theme.colours.darkNavy};
+    color: ${props => props.theme.colours.darkNavy};
     font-family: ${props => props.theme.fonts.monumentReg};
     font-size: 20px;
     margin: 0;

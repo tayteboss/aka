@@ -176,5 +176,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     button:focus {outline:0;}
+
+    canvas { outline: none; border: none; }
 `
 export default GlobalStyle;
