@@ -57,7 +57,7 @@ const Lights = () => {
         <pointLight position={[-10, 0, -20]} intensity={0.05} />
         <pointLight position={[0, -10, 0]} intensity={0.05} />
         <pointLight position={[10, 0, 0]} intensity={0.05} />
-        <pointLight position={[10, 0, 0]} intensity={0.05} />
+        {/* <pointLight position={[10, 0, 0]} intensity={0.05} /> */}
     </>
   );
 };
@@ -85,7 +85,7 @@ const CanvasThree = () => {
         <CameraControls />
         <Lights />
         <Suspense fallback={null}>
-          <HTMLContent modelPath='/gitf-box.gltf' />
+          <HTMLContent modelPath='../../../gitf-box.gltf' />
         </Suspense>
       </Canvas>
     </ThreeWrapper>
