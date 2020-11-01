@@ -12,6 +12,8 @@ const ThreeWrapper = styled.section`
   width: 100vw;
   top: 0;
   left: 0;
+  background-color: #000;
+  z-index: -10;
 `;
 
 function Model({ url }) {
@@ -38,22 +40,24 @@ const Lights = () => {
     <>
       {/* Ambient Light illuminates lights for all objects */}
       <ambientLight intensity={0.3} />
-      {/* Diretion light */}
-      <directionalLight position={[10, 10, 5]} intensity={1} />
-      <directionalLight
-        castShadow
-        position={[0, 10, 0]}
-        intensity={1.5}
-        shadow-mapSize-width={1024}
-        shadow-mapSize-height={1024}
-        shadow-camera-far={50}
-        shadow-camera-left={-10}
-        shadow-camera-right={10}
-        shadow-camera-top={10}
-        shadow-camera-bottom={-10}
-      />
-      {/* Spotlight Large overhead light */}
-      <spotLight intensity={1} position={[1000, 0, 0]} castShadow />
+        {/* Our main source of light, also casting our shadow */}
+        <directionalLight
+          castShadow
+          position={[0, 0.5, 0]}
+          intensity={0.05}
+          shadow-mapSize-width={1024}
+          shadow-mapSize-height={1024}
+          shadow-camera-far={50}
+          shadow-camera-left={-10}
+          shadow-camera-right={10}
+          shadow-camera-top={10}
+          shadow-camera-bottom={-10}
+        />
+        {/* A light to help illumnate the spinning boxes */}
+        <pointLight position={[-10, 0, -20]} intensity={0.05} />
+        <pointLight position={[0, -10, 0]} intensity={0.05} />
+        <pointLight position={[10, 0, 0]} intensity={0.05} />
+        <pointLight position={[10, 0, 0]} intensity={0.05} />
     </>
   );
 };
@@ -76,12 +80,12 @@ const CanvasThree = () => {
       <Canvas
         concurrent
         colorManagement
-        camera={{ position: [5, 0, 5], fov: 70 }}
+        camera={{ position: [1.6, 0, 0], fov: 70 }}
       >
         <CameraControls />
         <Lights />
         <Suspense fallback={null}>
-          <HTMLContent modelPath='/gitf-box.glb' />
+          <HTMLContent modelPath='/gitf-box.gltf' />
         </Suspense>
       </Canvas>
     </ThreeWrapper>
