@@ -22,25 +22,19 @@ function Model({ url }) {
 }
 
 const CameraControls = () => {
-  // Get a reference to the Three.js Camera, and the canvas html element.
-  // We need these to setup the OrbitControls component.
-  // https://threejs.org/docs/#examples/en/controls/OrbitControls
   const {
     camera,
     gl: { domElement },
   } = useThree();
-  // Ref to the controls, so that we can update them on every frame using useFrame
   const controls = useRef();
   useFrame((state) => controls.current.update());
-  return <orbitControls ref={controls} args={[camera, domElement]} enableZoom={false} />;
+  return <orbitControls ref={controls} args={[camera, domElement]} enableZoom={false} enableDamping={true} />;
 };
 
 const Lights = () => {
   return (
     <>
-      {/* Ambient Light illuminates lights for all objects */}
       <ambientLight intensity={0.3} />
-        {/* Our main source of light, also casting our shadow */}
         <directionalLight
           castShadow
           position={[0, 0.5, 0]}
@@ -53,11 +47,9 @@ const Lights = () => {
           shadow-camera-top={10}
           shadow-camera-bottom={-10}
         />
-        {/* A light to help illumnate the spinning boxes */}
         <pointLight position={[-10, 0, -20]} intensity={0.03} />
         <pointLight position={[0, -10, 0]} intensity={0.03} />
         <pointLight position={[10, 0, 0]} intensity={0.03} />
-        {/* <pointLight position={[10, 0, 0]} intensity={0.05} /> */}
     </>
   );
 };
