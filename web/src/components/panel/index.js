@@ -76,8 +76,8 @@ const ColumnTwo = styled.div`
     margin-top: 12px;
 
     @media ${props => props.theme.mediaBreakpoints.tablet} {
-        max-width: 60%;
-        min-width: 60%;
+        max-width: 70%;
+        min-width: 70%;
         margin-right: 0;
         margin-top: ${props => props.isContact ? null : '135px'};
         margin-bottom: ${props => props.isContact ? '55px' : null};
@@ -85,8 +85,8 @@ const ColumnTwo = styled.div`
     }
 
     @media ${props => props.theme.mediaBreakpoints.mobile} {
-        max-width: 60%;
-        min-width: 60%;
+        max-width: 70%;
+        min-width: 70%;
         margin-right: 0;
         margin-top: ${props => props.isContact ? null : '135px'};
         margin-bottom: ${props => props.isContact ? '55px' : null};
