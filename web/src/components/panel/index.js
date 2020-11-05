@@ -11,7 +11,7 @@ const PanelWrapper = styled.section`
     position: relative;
     padding: 50px 0%;
     z-index: 5;
-    position: sticky;
+    position: ${props => props.isContact ? 'relative' : 'sticky'};
     top: 0;
     height: ${props => props.isContact ? 'calc(100vh - 89px)' : null};
 
