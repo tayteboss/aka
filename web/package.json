@@ -19,6 +19,7 @@
     "@react-three/drei": "^2.2.3",
     "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/image-url": "^0.140.19",
+    "babel-plugin-styled-components": "^1.11.1",
     "classnames": "^2.2.6",
     "dotenv": "^8.2.0",
     "drei": "^1.5.7",
@@ -26,7 +27,7 @@
     "gatsby-plugin-react-helmet": "^3.3.13",
     "gatsby-plugin-sharp": "^2.6.42",
     "gatsby-plugin-sitemap": "^2.4.15",
-    "gatsby-plugin-styled-components": "^3.3.13",
+    "gatsby-plugin-styled-components": "^3.3.14",
     "gatsby-source-sanity": "^6.0.4",
     "gatsby-transformer-sharp": "^2.5.18",
     "lerp": "^1.0.3",
@@ -40,7 +41,7 @@
     "react-reveal": "^1.2.2",
     "react-spring": "^8.0.27",
     "react-three-fiber": "^5.1.4",
-    "styled-components": "^5.2.0",
+    "styled-components": "^5.2.1",
     "three": "^0.121.1"
   },
   "devDependencies": {
