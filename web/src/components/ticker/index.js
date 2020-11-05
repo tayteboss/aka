@@ -4,17 +4,17 @@ import styled, { css } from 'styled-components';
 import H2 from '../../elements/typography/H2';
 import Ticker from 'nice-react-ticker';
 
-    const green = css`
-        background-color: ${props => props.theme.colours.green};
-    `;
+const green = css`
+    background-color: ${props => props.theme.colours.green};
+`;
 
-    const red = css`
-        background-color: ${props => props.theme.colours.red};
-    `;
+const red = css`
+    background-color: ${props => props.theme.colours.red};
+`;
 
-    const blue = css`
-        background-color: ${props => props.theme.colours.blue};
-    `;
+const blue = css`
+    background-color: ${props => props.theme.colours.blue};
+`;
 
 const StripWrapper = styled.section`
     width: 100vw;
@@ -25,12 +25,12 @@ const StripWrapper = styled.section`
 
     @media ${props => props.theme.mediaBreakpoints.tablet} {
         height: 60px;
-        margin-top: calc(100vh - 60px);
+        margin-top: calc(90vh - 60px);
     }
 
     @media ${props => props.theme.mediaBreakpoints.mobile} {
         height: 60px;
-        margin-top: calc(100vh - 60px);
+        margin-top: calc(90vh - 60px);
     }
 
     .styles_ticker__8iZE9 {
@@ -65,6 +65,10 @@ const StripWrapper = styled.section`
     .styles_ticker-list__1YeNe {
         animation: styles_ticker__8iZE9 30s infinite linear;
         width: auto;
+    }
+
+    .styles_ticker__8iZE9:hover {
+        animation-play-state: running;
     }
 `;
 
