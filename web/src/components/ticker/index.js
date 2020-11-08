@@ -67,8 +67,16 @@ const StripWrapper = styled.section`
         width: auto;
     }
 
-    .styles_ticker__8iZE9:hover .styles_ticker-list__1YeNe {
+    .styles_ticker__8iZE9:hover .styles_ticker-list__1YeNe:hover .styles_ticker-list__1YeNe {
         animation-play-state: running;
+
+        @media ${props => props.theme.mediaBreakpoints.tablet} {
+            animation-play-state: running;
+        }
+
+        @media ${props => props.theme.mediaBreakpoints.mobile} {
+            animation-play-state: running;
+        }
     }
 `;
 

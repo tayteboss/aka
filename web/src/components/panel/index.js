@@ -23,6 +23,7 @@ const PanelWrapper = styled.section`
     @media ${props => props.theme.mediaBreakpoints.mobile} {
         flex-direction: column;
         padding: 10px 20px;
+        height: ${props => props.isContact ? 'auto' : null};
     }
 `;
 
