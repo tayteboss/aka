@@ -9,6 +9,7 @@ const FooterWrapper = styled.section`
     display: flex;
     justify-content: space-between;
     z-index: 20;
+    position: relative;
 `;
 
 const Text = styled(H4)`
