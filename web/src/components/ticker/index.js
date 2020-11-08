@@ -64,11 +64,11 @@ const StripWrapper = styled.section`
 
     .styles_ticker-list__1YeNe {
         animation: styles_ticker__8iZE9 30s infinite linear;
-        animation-play-state: running !important;
+        /* animation-play-state: running !important; */
         width: auto;
     }
 
-    .styles_ticker__8iZE9:hover .styles_ticker__8iZE9:focus .styles_ticker-list__1YeNe .styles_ticker-list__1YeNe:hover .styles_ticker-list__1YeNe:focus {
+    /* .styles_ticker__8iZE9:hover .styles_ticker__8iZE9:focus .styles_ticker-list__1YeNe .styles_ticker-list__1YeNe:hover .styles_ticker-list__1YeNe:focus {
         animation-play-state: running !important;
 
         @media ${props => props.theme.mediaBreakpoints.tablet} {
@@ -78,7 +78,7 @@ const StripWrapper = styled.section`
         @media ${props => props.theme.mediaBreakpoints.mobile} {
             animation-play-state: running !important;
         }
-    }
+    } */
 `;
 
 const Text = styled(H2)`
