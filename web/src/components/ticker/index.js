@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import styled, { css } from 'styled-components';
 import H2 from '../../elements/typography/H2';
-import Ticker from 'nice-react-ticker';
+import MarqueeText from 'react-marquee-text-component';
 
 const green = css`
     background-color: ${props => props.theme.colours.green};
@@ -30,15 +30,16 @@ const StripWrapper = styled.section`
 
     @media ${props => props.theme.mediaBreakpoints.mobile} {
         height: 60px;
-        margin-top: calc(90vh - 60px);
+        margin-top: calc(85vh - 60px);
     }
 
-    .styles_ticker__8iZE9 {
+    .marquee-wrap {
         height: 70px;
         width: 100vw;
         bottom: 0px;
         overflow: hidden;
         white-space: nowrap;
+
 
         ${props => {
             switch (props.colour) {
@@ -60,38 +61,29 @@ const StripWrapper = styled.section`
         @media ${props => props.theme.mediaBreakpoints.mobile} {
             height: 60px;
         }
-    }
 
-    .styles_ticker-list__1YeNe {
-        animation: styles_ticker__8iZE9 30s infinite linear;
-        /* animation-play-state: running !important; */
-        width: auto;
-    }
+        .marquee-text {
+            color: ${props => props.theme.colours.darkNavy};
+            font-family: ${props => props.theme.fonts.caja};
+            font-size: ${props => props.theme.size.h2};
+            margin-top: 3px;
 
-    .styles_ticker__8iZE9:hover .styles_ticker-list__1YeNe {
-        animation-play-state: running !important;
-    }
+            @media ${props => props.theme.mediaBreakpoints.tablet} {
+                font-size: 30px;
+                margin-top: 9px;
+            }
 
-    .styles_ticker__8iZE9:focus .styles_ticker-list__1YeNe {
-        animation-play-state: running !important;
-    }
-
-
-    /* .styles_ticker__8iZE9:hover .styles_ticker__8iZE9:focus .styles_ticker-list__1YeNe .styles_ticker-list__1YeNe:hover .styles_ticker-list__1YeNe:focus {
-        animation-play-state: running !important;
-
-        @media ${props => props.theme.mediaBreakpoints.tablet} {
-            animation-play-state: running !important;
+            @media ${props => props.theme.mediaBreakpoints.mobile} {
+                font-size: 30px;
+                margin-top: 9px;
+            }
         }
-
-        @media ${props => props.theme.mediaBreakpoints.mobile} {
-            animation-play-state: running !important;
-        }
-    } */
+    }
 `;
 
 const Text = styled(H2)`
     margin: 5px;
+    padding-bottom: 20px;
     color: ${props => props.colour === 'blue' ? '#dedede' : '#454d52'};
 
     @media ${props => props.theme.mediaBreakpoints.mobile} {
@@ -115,9 +107,7 @@ const StripTicker = ({ data }) => {
 
     return(
         <StripWrapper id='Studio' colour={colour} onClick={colourSelect}>
-            <Ticker>
-                <Text colour={colour}>{' '}{data.tickerMessage}{' '}</Text>
-            </Ticker>
+            <MarqueeText text={data.tickerMessage} className={'ticker'} duration={30} />
         </StripWrapper>
     );
 };
