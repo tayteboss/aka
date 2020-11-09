@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import styled, { css } from 'styled-components';
 import H2 from '../../elements/typography/H2';
-import MarqueeText from 'react-marquee-text-component';
+import Malarquee from 'react-malarquee';
 
 const green = css`
     background-color: ${props => props.theme.colours.green};
@@ -33,9 +33,8 @@ const StripWrapper = styled.section`
         margin-top: calc(85vh - 60px);
     }
 
-    .marquee-wrap {
+    span {
         height: 70px;
-        width: 100vw;
         bottom: 0px;
         overflow: hidden;
         white-space: nowrap;
@@ -60,23 +59,6 @@ const StripWrapper = styled.section`
 
         @media ${props => props.theme.mediaBreakpoints.mobile} {
             height: 60px;
-        }
-
-        .marquee-text {
-            color: ${props => props.theme.colours.darkNavy};
-            font-family: ${props => props.theme.fonts.caja};
-            font-size: ${props => props.theme.size.h2};
-            margin-top: 3px;
-
-            @media ${props => props.theme.mediaBreakpoints.tablet} {
-                font-size: 30px;
-                margin-top: 9px;
-            }
-
-            @media ${props => props.theme.mediaBreakpoints.mobile} {
-                font-size: 30px;
-                margin-top: 9px;
-            }
         }
     }
 `;
@@ -107,7 +89,9 @@ const StripTicker = ({ data }) => {
 
     return(
         <StripWrapper id='Studio' colour={colour} onClick={colourSelect}>
-            <MarqueeText text={data.tickerMessage} className={'ticker'} duration={30} />
+            <Malarquee rate={150}>
+                <Text>{data.tickerMessage}</Text>
+            </Malarquee>
         </StripWrapper>
     );
 };
