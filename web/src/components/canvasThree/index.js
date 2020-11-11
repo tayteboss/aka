@@ -7,13 +7,21 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 extend({ OrbitControls });
 
 const ThreeWrapper = styled.section`
-  position: absolute;
+  position: fixed;
   height: 100vh;
   width: 100vw;
   top: 0;
   left: 0;
   background-color: #000;
   z-index: -10;
+
+  @media ${props => props.theme.mediaBreakpoints.tablet} {
+    height: 90vh;
+  }
+
+  @media ${props => props.theme.mediaBreakpoints.mobile} {
+    height: 90vh;
+  }
 `;
 
 function Model({ url }) {

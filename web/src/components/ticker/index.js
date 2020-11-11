@@ -2,19 +2,19 @@ import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import styled, { css } from 'styled-components';
 import H2 from '../../elements/typography/H2';
-import Ticker from 'nice-react-ticker';
+import Malarquee from 'react-malarquee';
 
-    const green = css`
-        background-color: ${props => props.theme.colours.green};
-    `;
+const green = css`
+    background-color: ${props => props.theme.colours.green};
+`;
 
-    const red = css`
-        background-color: ${props => props.theme.colours.red};
-    `;
+const red = css`
+    background-color: ${props => props.theme.colours.red};
+`;
 
-    const blue = css`
-        background-color: ${props => props.theme.colours.blue};
-    `;
+const blue = css`
+    background-color: ${props => props.theme.colours.blue};
+`;
 
 const StripWrapper = styled.section`
     width: 100vw;
@@ -25,20 +25,20 @@ const StripWrapper = styled.section`
 
     @media ${props => props.theme.mediaBreakpoints.tablet} {
         height: 60px;
-        margin-top: calc(100vh - 60px);
+        margin-top: calc(90vh - 60px);
     }
 
     @media ${props => props.theme.mediaBreakpoints.mobile} {
         height: 60px;
-        margin-top: calc(100vh - 60px);
+        margin-top: calc(85vh - 60px);
     }
 
-    .styles_ticker__8iZE9 {
+    span {
         height: 70px;
-        width: 100vw;
         bottom: 0px;
         overflow: hidden;
         white-space: nowrap;
+
 
         ${props => {
             switch (props.colour) {
@@ -61,15 +61,11 @@ const StripWrapper = styled.section`
             height: 60px;
         }
     }
-
-    .styles_ticker-list__1YeNe {
-        animation: styles_ticker__8iZE9 30s infinite linear;
-        width: auto;
-    }
 `;
 
 const Text = styled(H2)`
     margin: 5px;
+    padding-bottom: 20px;
     color: ${props => props.colour === 'blue' ? '#dedede' : '#454d52'};
 
     @media ${props => props.theme.mediaBreakpoints.mobile} {
@@ -93,9 +89,9 @@ const StripTicker = ({ data }) => {
 
     return(
         <StripWrapper id='Studio' colour={colour} onClick={colourSelect}>
-            <Ticker>
-                <Text colour={colour}>{' '}{data.tickerMessage}{' '}</Text>
-            </Ticker>
+            <Malarquee rate={150}>
+                <Text>{data.tickerMessage}</Text>
+            </Malarquee>
         </StripWrapper>
     );
 };

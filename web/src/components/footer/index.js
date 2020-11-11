@@ -8,6 +8,8 @@ const FooterWrapper = styled.section`
     border-top: 2px solid ${props => props.theme.colours.darkNavy};
     display: flex;
     justify-content: space-between;
+    z-index: 20;
+    position: relative;
 `;
 
 const Text = styled(H4)`
