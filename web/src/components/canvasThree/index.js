@@ -46,7 +46,7 @@ const Lights = () => {
         <directionalLight
           castShadow
           position={[0, 0.5, 0]}
-          intensity={0.03}
+          intensity={0.04}
           shadow-mapSize-width={1024}
           shadow-mapSize-height={1024}
           shadow-camera-far={50}
@@ -55,9 +55,9 @@ const Lights = () => {
           shadow-camera-top={10}
           shadow-camera-bottom={-10}
         />
-        <pointLight position={[-10, 0, -20]} intensity={0.03} />
-        <pointLight position={[0, -10, 0]} intensity={0.03} />
-        <pointLight position={[10, 0, 0]} intensity={0.03} />
+        <pointLight position={[-10, 0, -20]} intensity={0.04} />
+        <pointLight position={[0, -10, 0]} intensity={0.04} />
+        <pointLight position={[10, 0, 0]} intensity={0.04} />
     </>
   );
 };
